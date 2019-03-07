@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn instance to serve rlogger
+After=network.target
+
+[Service]
+User=root
+Group=www-data
+WorkingDirectory=/var/www/python/rlogger
+Environment="PATH=/var/www/python/venv/rlogger/bin"
+ExecStart=/var/www/python/venv/rlogger/bin/gunicorn --workers 3 --bind unix:rlogger.sock -m 007 wsgi:app
+
+[Install]
+WantedBy=multi-user.target

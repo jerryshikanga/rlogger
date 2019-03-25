@@ -1,0 +1,2 @@
+,time,logger,level,ip,data,form
+0,2019-03-25 11:19:42.590042,rlogger,INFO,127.0.0.1,{},"{""cool"": ""test""}"

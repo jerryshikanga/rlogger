@@ -63,7 +63,7 @@ class Log(object):
 
 @app.route('/', methods=["POST", 'PATCH', 'PUT', 'GET'])
 def logger():
-    if request.method in "GET":
+    if request.method in ["GET",]:
         logs = Log.get_current_logs()
         return logs.to_json(orient='index')
     else:
